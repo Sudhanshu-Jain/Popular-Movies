@@ -1,0 +1,79 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.example.android.popularmovies.MovieDetails">
+
+
+   <ImageView
+       android:layout_width="150dp"
+       android:layout_height="180dp"
+       android:id="@+id/thumbnail"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interstellar"
+        android:layout_below="@+id/thumbnail"
+        android:id="@+id/movieTitle"
+        android:layout_marginTop="15dp"
+        android:textSize="22sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20sp"
+        android:text = "Release Date"
+        android:id="@+id/releaseDate"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_below="@+id/releaseDate"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_marginLeft="50dp"
+        android:text="23/1/2018"
+        android:id="@+id/date"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20sp"
+        android:text = "Rating"
+        android:id="@+id/rating"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_below="@+id/rating"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_marginLeft="50dp"
+        android:text="8.3/10"
+        android:id="@+id/ratingsGiven"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/content"
+        android:layout_below="@+id/movieTitle"
+        android:textSize="15sp"
+        android:text = "fjbakegbk kjbfkabegkabgke kjbgaskubgkugr kjsbg jkbgekusbgakueabgf  kjafkubegkuBEKUBGEKU NKAES GKHG"/>
+
+
+
+</RelativeLayout>
+</ScrollView>
