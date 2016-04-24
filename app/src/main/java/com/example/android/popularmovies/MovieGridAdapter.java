@@ -20,19 +20,28 @@ import java.util.List;
 public class MovieGridAdapter extends BaseAdapter {
 
     private Context mContext;
-    private ArrayList<Movie> movieArrayList;
+    private List<Movie> movieArrayList;
     LayoutInflater mInflater;
-    public MovieGridAdapter(Context mContext, ArrayList<Movie> movieArrayList) {
+    public int resourceId;
+    public MovieGridAdapter(Context mContext, int resourceId,List<Movie> movieArrayList) {
         this.mContext = mContext;
         this.movieArrayList = movieArrayList;
-
+        this.resourceId = resourceId;
         mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    }
+
+    public void uptadeValues(List<Movie> list){
+        movieArrayList = list;
     }
 
 
     @Override
     public int getCount() {
         return movieArrayList.size();
+    }
+
+    public List<Movie> getElements(){
+        return movieArrayList;
     }
 
     @Override
@@ -52,7 +61,7 @@ public class MovieGridAdapter extends BaseAdapter {
         ViewHolder viewHolder;
 
         if (view == null) {
-            view = mInflater.inflate(R.layout.grid_single, parent, false);
+            view = mInflater.inflate(resourceId, parent, false);
             viewHolder = new ViewHolder(view);
             view.setTag(viewHolder);
         }
@@ -69,6 +78,11 @@ public class MovieGridAdapter extends BaseAdapter {
         return view;
     }
 
+    public void updateValues(List<Movie> list){
+        movieArrayList = list;
+        notifyDataSetChanged();
+
+    }
     @Override
     public boolean isEnabled(int position) {
         return true;
