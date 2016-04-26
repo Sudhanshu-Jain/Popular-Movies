@@ -23,9 +23,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by muhammadfarag on 9/27/15.
- */
 public class FetchMoviesData extends AsyncTask<Void, Void, List<Movie>> {
 
     private static final int PAGE_NUMBER_1 = 1;
@@ -64,7 +61,7 @@ public class FetchMoviesData extends AsyncTask<Void, Void, List<Movie>> {
         try {
             movies = connector.getMovies(PAGE_NUMBER_1,200, mSortCriteria);
         } catch (IOException | JSONException e) {
-            // TODO: Display error message
+
             Log.e("", "Error occurred while parsing movies data...: " + e.toString());
             return new ArrayList<>();
         } catch (Exception e) {

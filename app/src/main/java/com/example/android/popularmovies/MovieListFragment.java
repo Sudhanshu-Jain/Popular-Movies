@@ -31,9 +31,7 @@ import com.example.android.popularmovies.models.Movie;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by muhammadfarag on 9/30/15.
- */
+
 public class MovieListFragment extends Fragment implements DataSetUpdateListener, LoaderManager.LoaderCallbacks<Cursor> {
 
     public static final String KEY_MOVIES = "key_movies";

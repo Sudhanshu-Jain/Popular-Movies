@@ -20,7 +20,6 @@ public class DetailsActivityFragment extends Fragment {
 
     public static final String ARG_MOVIE = "arg_movie";
     private FavouriteMovieManager mManager;
-    // Fixme: Use a callback interface instead
     private CallBacks mCallBacks;
 
     public DetailsActivityFragment() {

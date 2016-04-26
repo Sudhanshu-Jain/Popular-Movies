@@ -22,13 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
-
-
-/**
- * Created by sudhanshu on 17/4/16.
- */
-
 public class MovieServerConnector {
 
     private static final String TAG = "ServerConnector";
